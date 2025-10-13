@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos de Processing - LuLaLi20</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --heading-color: #1a1a1a;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+        .header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .header a {
+            color: #fff;
+            font-weight: 600;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 2em;
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+        .project-card p {
+            flex-grow: 1; /* Hace que la descripción ocupe el espacio disponible */
+            margin-bottom: 25px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #fff;
+            opacity: 0.8;
+        }
+        .footer a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Processing Showcase</h1>
+            <p>Una colección de proyectos de <a href="https://github.com/LuLaLi20" target="_blank">LuLaLi20</a></p>
+        </div>
+
+        <div class="project-grid">
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <h2>Círculo Básico RGB</h2>
+                <p>Un sketch que dibuja un círculo y cambia sus colores, ideal para entender los conceptos básicos de color.</p>
+                <a href="proyecto-circulo-rgb.html" class="btn">Ver Detalles del Proyecto</a>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <h2>Movimiento Básico</h2>
+                <p>Muestra cómo mover una forma por la pantalla utilizando el teclado, introduciendo la gestión de eventos.</p>
+                <a href="proyecto-movimiento.html" class="btn">Ver Detalles del Proyecto</a>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <h2>Pizarra Blanca</h2>
+                <p>Una pizarra digital que permite al usuario dibujar libremente en la pantalla con el ratón.</p>
+                <a href="proyecto-pizarra.html" class="btn">Ver Detalles del Proyecto</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Página generada para el repositorio <a href="https://github.com/LuLaLi20/processing/" target="_blank">LuLaLi20/processing</a></p>
+        </div>
+    </div>
+</body>
+</html>
