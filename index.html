@@ -6,7 +6,7 @@
     <title>Proyectos de Processing - LuLaLi20</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #6a11cb;
@@ -15,37 +15,83 @@
             --text-color: #333;
             --heading-color: #1a1a1a;
             --shadow-color: rgba(0, 0, 0, 0.1);
+            --grid-color: rgba(0, 0, 0, 0.07);
         }
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.7;
             margin: 0;
-            padding: 40px 20px;
+            background-color: #f8f9fa;
+        }
+
+        /* --- SECCIÓN HERO (NUEVA CABECERA) --- */
+        .hero-section {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(to right, var(--grid-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .hero-section .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        .hero-section h1 {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 3em;
+            color: #111;
+            margin: 0 0 10px 0;
+        }
+        .hero-section p.subtitle {
+            font-family: 'Source Code Pro', monospace;
+            color: #666;
+            font-size: 1.1em;
+            margin: 0;
+        }
+        .github-stats {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        .stat-badge {
+            display: flex;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 0.9em;
+            font-weight: 700;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        }
+        .stat-badge .label {
+            background-color: #444;
+            color: #fff;
+            padding: 6px 12px;
+        }
+        .stat-badge .count-stars {
+            background-color: #ffca28; /* Amarillo */
+            color: #333;
+            padding: 6px 12px;
+        }
+        .stat-badge .count-issues {
+            background-color: #2575fc; /* Azul */
+            color: #fff;
+            padding: 6px 12px;
+        }
+
+        /* --- SECCIÓN DE PROYECTOS --- */
+        .projects-section {
+            padding: 60px 20px;
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--text-color);
         }
         .container {
             max-width: 900px;
             margin: auto;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-            color: #fff;
-        }
-        .header h1 {
-            font-size: 3.5em;
-            font-weight: 700;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        .header a {
-            color: #fff;
-            font-weight: 600;
         }
         .project-grid {
             display: grid;
@@ -73,11 +119,12 @@
             color: var(--heading-color);
         }
         .project-card p {
-            flex-grow: 1; /* Hace que la descripción ocupe el espacio disponible */
+            flex-grow: 1;
             margin-bottom: 25px;
+            color: #555;
         }
         .btn {
-            display: inline-block;
+            display: block;
             padding: 12px 25px;
             background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
             color: #fff;
@@ -94,48 +141,95 @@
         }
         .footer {
             text-align: center;
-            margin-top: 60px;
+            padding: 30px 20px;
             color: #fff;
-            opacity: 0.8;
+            opacity: 0.9;
         }
         .footer a {
             color: #fff;
         }
+
+        @media (max-width: 600px) {
+            .hero-section h1 {
+                font-size: 2.2em;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Processing Showcase</h1>
-            <p>Una colección de proyectos de <a href="https://github.com/LuLaLi20" target="_blank">LuLaLi20</a></p>
-        </div>
 
-        <div class="project-grid">
-            <!-- Proyecto 1 -->
-            <div class="project-card">
-                <h2>Círculo Básico RGB</h2>
-                <p>Un sketch que dibuja un círculo y cambia sus colores, ideal para entender los conceptos básicos de color.</p>
-                <a href="proyecto-circulo-rgb.html" class="btn">Ver Detalles del Proyecto</a>
+    <div class="hero-section">
+        <img src="input_file_0.jpeg" alt="Avatar de LuLaLi20" class="avatar">
+        <h1>LuLaLi20/processing</h1>
+        <p class="subtitle">Proyectos en processing de cdigo abierto by LuLaLi20</p>
+        <div class="github-stats">
+            <div class="stat-badge">
+                <span class="label">STARS</span>
+                <!-- El ID "github-stars-count" es el objetivo del script -->
+                <span class="count-stars" id="github-stars-count">1</span>
             </div>
-
-            <!-- Proyecto 2 -->
-            <div class="project-card">
-                <h2>Movimiento Básico</h2>
-                <p>Muestra cómo mover una forma por la pantalla utilizando el teclado, introduciendo la gestión de eventos.</p>
-                <a href="proyecto-movimiento.html" class="btn">Ver Detalles del Proyecto</a>
-            </div>
-
-            <!-- Proyecto 3 -->
-            <div class="project-card">
-                <h2>Pizarra Blanca</h2>
-                <p>Una pizarra digital que permite al usuario dibujar libremente en la pantalla con el ratón.</p>
-                <a href="proyecto-pizarra.html" class="btn">Ver Detalles del Proyecto</a>
+            <div class="stat-badge">
+                <span class="label">ISSUES</span>
+                <span class="count-issues">0</span>
             </div>
         </div>
-        
+    </div>
+
+    <div class="projects-section">
+        <div class="container">
+            <div class="project-grid">
+                <!-- Proyectos... -->
+                <div class="project-card">
+                    <h2>Círculo Básico RGB</h2>
+                    <p>Un sketch que dibuja un círculo y cambia sus colores, ideal para entender los conceptos básicos de color.</p>
+                    <a href="proyecto-circulo-rgb.html" class="btn">Ver Detalles del Proyecto</a>
+                </div>
+                <div class="project-card">
+                    <h2>Movimiento Básico</h2>
+                    <p>Muestra cómo mover una forma por la pantalla utilizando el teclado, introduciendo la gestión de eventos.</p>
+                    <a href="proyecto-movimiento.html" class="btn">Ver Detalles del Proyecto</a>
+                </div>
+                <div class="project-card">
+                    <h2>Pizarra Blanca</h2>
+                    <p>Una pizarra digital que permite al usuario dibujar libremente en la pantalla con el ratón.</p>
+                    <a href="proyecto-pizarra.html" class="btn">Ver Detalles del Proyecto</a>
+                </div>
+            </div>
+        </div>
         <div class="footer">
             <p>Página generada para el repositorio <a href="https://github.com/LuLaLi20/processing/" target="_blank">LuLaLi20/processing</a></p>
         </div>
     </div>
+
+    <!-- ============================================= -->
+    <!-- SCRIPT PARA ACTUALIZAR LAS ESTRELLAS DE GITHUB -->
+    <!-- ============================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = 'LuLaLi20';
+            const repo = 'processing';
+            const apiUrl = `https://api.github.com/repos/${user}/${repo}`;
+            
+            const starsElement = document.getElementById('github-stars-count');
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('La respuesta de la red no fue exitosa');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && data.stargazers_count !== undefined) {
+                        starsElement.textContent = data.stargazers_count;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al obtener los datos de GitHub:', error);
+                    // Si hay un error, el número "1" que pusimos en el HTML se quedará como valor por defecto.
+                });
+        });
+    </script>
+
 </body>
 </html>
