@@ -1,0 +1,111 @@
+<html><body><pre>
+<span style="color: #E7671C;">int</span> stroke_weight = 1;
+
+<span style="color: #30987F;">void</span> <span style="color: #006698;"><b>setup</b></span> () {
+&nbsp;&nbsp;<span style="color: #006698;">size</span>(960, 540, <span style="color: #754891;">P2D</span>);
+&nbsp;&nbsp;<span style="color: #006698;">background</span>(#000000);
+&nbsp;&nbsp;<span style="color: #006698;">stroke</span>(#ffffff);
+}
+
+<span style="color: #30987F;">void</span> <span style="color: #006698;"><b>keyPressed</b></span>() {
+
+&nbsp;&nbsp;<span style="color: #656565;">// Cambia el clor de fondo para borrar la pantalla</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;c&apos;</span> || <span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;C&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">background</span>(#000000);
+&nbsp;&nbsp;}
+
+&nbsp;&nbsp;<span style="color: #656565;">// Cambia el color </span>
+&nbsp;&nbsp;<span style="color: #656565;">// Rojo</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;r&apos;</span> || <span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;R&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">stroke</span>(#ff0000);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #656565;">// Verde</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;g&apos;</span> || <span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;G&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">stroke</span>(#00ff00);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #656565;">// Azul</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;b&apos;</span> || <span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;B&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">stroke</span>(#0000ff);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #656565;">// Amarillo</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;y&apos;</span> || <span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;Y&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">stroke</span>(#ffff00);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #656565;">// Magenta</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;p&apos;</span> || <span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;P&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">stroke</span>(#ff00ff);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #656565;">// Cian</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;a&apos;</span> || <span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;A&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">stroke</span>(#00ffff);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #656565;">// Blanco</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;w&apos;</span> || <span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;W&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">stroke</span>(#ffffff);
+&nbsp;&nbsp;}
+
+&nbsp;&nbsp;<span style="color: #656565;">// Cambia el grosor del trazo</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;1&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;1;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;2&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;2;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;3&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;3;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;4&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;4;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;5&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;5;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;6&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;6;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;7&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;7;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;8&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;8;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;9&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;9;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;0&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;10;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">keyCode</span> == <span style="color: #754891;">UP</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;+=&nbsp;10;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">keyCode</span> == <span style="color: #754891;">DOWN</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;-=&nbsp;10;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">keyCode</span> == <span style="color: #754891;">LEFT</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;-=&nbsp;1;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">keyCode</span> == <span style="color: #754891;">RIGHT</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;stroke_weight&nbsp;+=&nbsp;1;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (stroke_weight &lt; 1) {
+&nbsp;&nbsp;stroke_weight&nbsp;=&nbsp;1;
+}
+&nbsp;&nbsp;<span style="color: #006698;">strokeWeight</span>(stroke_weight);
+
+&nbsp;&nbsp;<span style="color: #656565;">// Guarda una captura de pantalla</span>
+&nbsp;&nbsp;<span style="color: #656565;">// Este l&#237;nea no la he hecho yo la ha sugerido el vscode X copilot</span>
+&nbsp;&nbsp;<span style="color: #656565;">// Yo solo le he cambiado la path de guardado</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span> (<span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;s&apos;</span> || <span style="color: #DB4D7A;">key</span> == <span style="color: #738A63;">&apos;S&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">saveFrame</span>(<span style="color: #738A63;">&quot;./user-imgs/screenshot-######.png&quot;</span>);
+&nbsp;&nbsp;}
+}
+
+<span style="color: #30987F;">void</span> <span style="color: #006698;"><b>draw</b></span> () {
+&nbsp;&nbsp;<span style="color: #656565;">//strokeWeight(stroke_weight);</span>
+&nbsp;&nbsp;<span style="color: #6D9810;">if</span>(<span style="color: #DB4D7A;">mousePressed</span>){
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006698;">line</span>(<span style="color: #DB4D7A;">pmouseX</span>, <span style="color: #DB4D7A;">pmouseY</span>, <span style="color: #DB4D7A;">mouseX</span>, <span style="color: #DB4D7A;">mouseY</span>);
+&nbsp;&nbsp;}
+}
+
+</pre></body></html>
