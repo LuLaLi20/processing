@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CAMBIA EL TÍTULO PARA CADA PROYECTO -->
+    <title>Formas - LuLaLi20</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --card-bg: #ffffff;
+            --text-color: #4a4a4a;
+            --heading-color: #1a1a1a;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-color);
+        }
+        .content-wrapper {
+            max-width: 900px;
+            margin: auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        .project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        pre[class*="language-"] {
+            margin-top: 20px;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            padding: 25px 20px !important;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <a href="../index.html" class="back-link">&larr; Volver a todos los proyectos</a>
+
+        <!-- ====================================================== -->
+        <!-- ===== EMPIEZA A EDITAR DESDE AQUÍ PARA CADA PROYECTO ===== -->
+        <!-- ====================================================== -->
+
+        <h1>Formas</h1>
+
+        <h2>Funciones de formas</h2>
+        <p>
+          Aquí se explica como usar las funciones point, line, circle...
+        </p>
+
+        <!--h2>Captura de Pantalla</h2>
+        < CAMBIA 'placeholder.png' POR LA RUTA A TU IMAGEN >
+        <img src="https://via.placeholder.com/800x400.png?text=Captura+de+tu+Proyecto" alt="Captura del proyecto Basic movement" class="project-image">-->
+        
+        <h2>Point:</h2>
+        <pre><code class="language-java">
+void setup () {
+    size(1920, 1080) // Hace el tamaño de la ventana.
+    background(255) // Pone el color de fondo.
+    fill(0) // Rellena de color negro.
+    point(X, Y) // Hace un punto en las coordenadas X e Y que pongamos.
+}
+        </code></pre>
+
+        <p></p>
+        
+        <a href="https://github.com/LuLaLi20/processing/archive/refs/heads/main.zip" class="btn">Descargar Repositorio Completo</a>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
