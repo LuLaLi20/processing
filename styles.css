@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --heading-color: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --grid-color: rgba(0, 0, 0, 0.07);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    line-height: 1.7;
+}
+
+/* --- SECCIÓN HERO --- */
+.hero-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(to right, var(--grid-color) 1px, transparent 1px);
+    background-size: 30px 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.hero-section .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.hero-section h1 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3em;
+    color: #111;
+    margin: 0 0 10px 0;
+}
+
+.hero-section p.subtitle {
+    font-family: 'Source Code Pro', monospace;
+    color: #666;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.github-stats {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.stat-badge {
+    display: flex;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+    font-weight: 700;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.stat-badge .label { background-color: #444; color: #fff; padding: 6px 12px; }
+.stat-badge .count-stars { background-color: #ffca28; color: #333; padding: 6px 12px; }
+.stat-badge .count-issues { background-color: #2575fc; color: #fff; padding: 6px 12px; }
+
+/* --- NUEVA SECCIÓN DE FILTROS --- */
+#downloads-content {
+    background-color: #f1f3f5;
+    padding: 30px 20px;
+}
+
+.downloads-filter-controls {
+    max-width: 900px;
+    margin: auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+.tag-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.tag-filter-container span {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.tag-button {
+    padding: 8px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tag-button:hover {
+    background-color: #e9ecef;
+}
+
+.tag-button.active {
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    color: #fff;
+    border-color: transparent;
+}
+
+/* --- SECCIÓN DE PROYECTOS --- */
+.projects-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); }
+.project-card h2 { margin-top: 0; margin-bottom: 15px; font-size: 2em; font-weight: 600; color: var(--heading-color); }
+.project-card p { flex-grow: 1; margin-bottom: 25px; color: #555; }
+.btn { display: block; padding: 12px 25px; background: linear-gradient(45deg, var(--secondary-color), var(--primary-color)); color: #fff; text-decoration: none; border-radius: 50px; font-weight: 600; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); text-align: center; }
+.btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); }
+.footer { text-align: center; padding: 30px 20px; color: #fff; opacity: 0.9; }
+.footer a { color: #fff; }
+
+/* --- ESTILOS PARA SUB-WEBS --- */
+.subpage-body {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 40px 20px;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: auto;
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) { .hero-section h1 { font-size: 2.2em; } }

@@ -7,147 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #6a11cb;
-            --secondary-color: #2575fc;
-            --card-bg: #ffffff;
-            --text-color: #333;
-            --heading-color: #1a1a1a;
-            --shadow-color: rgba(0, 0, 0, 0.1);
-            --grid-color: rgba(0, 0, 0, 0.07);
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: #f8f9fa;
-        }
-
-        /* --- SECCIÓN HERO --- */
-        .hero-section {
-            background-color: #fff;
-            padding: 60px 20px;
-            text-align: center;
-            background-image: 
-                linear-gradient(var(--grid-color) 1px, transparent 1px),
-                linear-gradient(to right, var(--grid-color) 1px, transparent 1px);
-            background-size: 30px 30px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .hero-section .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-        }
-        .hero-section h1 {
-            font-family: 'Source Code Pro', monospace;
-            font-size: 3em;
-            color: #111;
-            margin: 0 0 10px 0;
-        }
-        .hero-section p.subtitle {
-            font-family: 'Source Code Pro', monospace;
-            color: #666;
-            font-size: 1.1em;
-            margin: 0;
-        }
-        .github-stats {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
-        }
-        .stat-badge {
-            display: flex;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 0.9em;
-            font-weight: 700;
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-        }
-        .stat-badge .label { background-color: #444; color: #fff; padding: 6px 12px; }
-        .stat-badge .count-stars { background-color: #ffca28; color: #333; padding: 6px 12px; }
-        .stat-badge .count-issues { background-color: #2575fc; color: #fff; padding: 6px 12px; }
-
-        /* --- NUEVA SECCIÓN DE FILTROS --- */
-        #downloads-content {
-            background-color: #f1f3f5;
-            padding: 30px 20px;
-        }
-        .downloads-filter-controls {
-            max-width: 900px;
-            margin: auto;
-        }
-        #searchInput {
-            width: 100%;
-            padding: 15px;
-            font-size: 16px;
-            border: 1px solid #ced4da;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
-        }
-        .tag-filter-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-        }
-        .tag-filter-container span {
-            font-weight: 600;
-            margin-right: 10px;
-        }
-        .tag-button {
-            padding: 8px 15px;
-            border: 1px solid #ced4da;
-            border-radius: 20px;
-            background-color: #fff;
-            color: #495057;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .tag-button:hover {
-            background-color: #e9ecef;
-        }
-        .tag-button.active {
-            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
-            color: #fff;
-            border-color: transparent;
-        }
-
-        /* --- SECCIÓN DE PROYECTOS --- */
-        .projects-section {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        }
-        .container { max-width: 900px; margin: auto; }
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 10px 30px var(--shadow-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .project-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); }
-        .project-card h2 { margin-top: 0; margin-bottom: 15px; font-size: 2em; font-weight: 600; color: var(--heading-color); }
-        .project-card p { flex-grow: 1; margin-bottom: 25px; color: #555; }
-        .btn { display: block; padding: 12px 25px; background: linear-gradient(45deg, var(--secondary-color), var(--primary-color)); color: #fff; text-decoration: none; border-radius: 50px; font-weight: 600; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); text-align: center; }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); }
-        .footer { text-align: center; padding: 30px 20px; color: #fff; opacity: 0.9; }
-        .footer a { color: #fff; }
-
-        @media (max-width: 600px) { .hero-section h1 { font-size: 2.2em; } }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -171,8 +31,8 @@
                 <span>Filtrar por:</span>
                 <button class="tag-button active" data-tag="all">Mostrar todo</button>
                 <button class="tag-button" data-tag="principiante">Principiante</button>
-                <button class="tag-button" data-tag="principiante">Medio</button>
-                <button class="tag-button" data-tag="principiante">Experto</button>
+                <button class="tag-button" data-tag="medio">Medio</button>
+                <button class="tag-button" data-tag="experto">Experto</button>
                 <button class="tag-button" data-tag="interactivo">Interactivo</button>
                 <button class="tag-button" data-tag="graficos">Gráficos</button>
             </div>
@@ -186,25 +46,18 @@
         <div class="container">
             <div class="project-grid" id="project-grid">
                 
-                <!-- Proyecto 1 -->
-                <div class="project-card" data-tags="principiante interactivo graficos">
-                    <h2>Círculo Básico RGB</h2>
-                    <p>Un lienzo interactivo que inunda la pantalla de color. Usa el ratón y las teclas para cambiar entre colores.</p>
-                    <a href="projects/sketch_basic_circle_rgb.html" class="btn">Ver Detalles del Proyecto</a>
+                <!-- Documentación -->
+                <div class="project-card">
+                    <h2>Documentación</h2>
+                    <p>Recursos, tutoriales y ejemplos para aprender a usar Processing.</p>
+                    <a href="documentation/index.html" class="btn">Ver Documentación</a>
                 </div>
 
-                <!-- Proyecto 2 -->
-                <div class="project-card" data-tags="principiante interactivo">
-                    <h2>Movimiento Básico</h2>
-                    <p>Un ejemplo fundamental que muestra cómo cargar una imagen y controlar su movimiento con el teclado.</p>
-                    <a href="projects/sketch_basic_movement.html" class="btn">Ver Detalles del Proyecto</a>
-                </div>
-
-                <!-- Proyecto 3 -->
-                <div class="project-card" data-tags="principiante interactivo graficos">
-                    <h2>Pizarra Básica</h2>
-                    <p>Una pizarra digital minimalista. Mantén pulsado el ratón y muévelo para dibujar con líneas blancas.</p>
-                    <a href="projects/sketch_basic_whiteboard.html" class="btn">Ver Detalles del Proyecto</a>
+                <!-- Proyectos -->
+                <div class="project-card">
+                    <h2>Proyectos</h2>
+                    <p>Una colección de proyectos de código abierto para explorar y reutilizar.</p>
+                    <a href="projects/index.html" class="btn">Ver Proyectos</a>
                 </div>
 
             </div>
